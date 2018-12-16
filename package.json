@@ -1,0 +1,32 @@
+{
+  "name": "trainer-in-your-pocket",
+  "version": "1.0.0",
+  "description": "An easy-to-use workout and nutrition app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vwhope/Trainer-in-your-Pocket.git"
+  },
+  "author": "Kevin Luu, Vickie Hope, Alton Salmon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vwhope/Trainer-in-your-Pocket/issues"
+  },
+  "homepage": "https://github.com/vwhope/Trainer-in-your-Pocket#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "validator": "^10.9.0"
+  }
+}
