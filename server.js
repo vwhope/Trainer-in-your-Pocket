@@ -1,13 +1,25 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-
+const bodyParser = require("body-parser");
 const users = require('./routes/api/users');
+const passport = require('passport');
 
 const app = express();
 
 // DB config
 const db = require('./config/keys').mongoURI;
+
+// Setup Middleware
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static("public"));
+
+// Passport Middleware
+app.use(passport.initialize());
+
+// Passport Config
+require('./config/passport')(passport);
 
 // Connect to MongoDB
 mongoose
