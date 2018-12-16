@@ -1,12 +1,13 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+
 const Schema = mongoose.Schema;
 
-//Create Schema
+// Create Schema
 const UserSchema = new Schema({
   name: {
-    type: String, 
-    required: true 
-  }, 
+    type: String,
+    required: true
+  },
   email: {
     type: String,
     required: true
@@ -20,7 +21,7 @@ const UserSchema = new Schema({
   },
   dob: {
     type: Date,
-    required: true,
+    required: true
   },
   createdAt: {
     type: Date,
@@ -31,8 +32,8 @@ const UserSchema = new Schema({
     required: true
   },
   weight: {
-    type: Number, 
-    required: true,
+    type: Number,
+    required: true
   },
   height: {
     type: Number,
@@ -40,8 +41,8 @@ const UserSchema = new Schema({
   },
   diabetic: {
     type: Boolean,
-    required: true,
+    required: true
   }
 });
 
-module.exports = User = mongoose.model('users', UserSchema);
+module.exports = User = mongoose.model("users", UserSchema);
