@@ -6,8 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
+    "lint": "eslint **/*.js --quiet",
+    "lint:debug": "eslint **/*.js --debug",
     "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha -u tdd --reporter spec --exit"
+    "test": "npm run lint && cross-env NODE_ENV=test"
   },
   "repository": {
     "type": "git",
@@ -33,7 +35,7 @@
   },
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "eslint": "^5.10.0",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.0",
     "prettier": "^1.15.3"
